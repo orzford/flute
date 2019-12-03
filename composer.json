@@ -1,0 +1,42 @@
+{
+  "name": "orzford/flute",
+  "description": "Limoncello framework json-api support.",
+  "keywords": [
+    "limoncello",
+    "framework",
+    "json-api",
+    "flute"
+  ],
+  "homepage": "https://github.com/orzford/flute",
+  "support": {
+    "issues": "https://github.com/orzford/issues"
+  },
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "dreamsbond",
+      "email": "info@dreamsbond.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.0",
+    "doctrine/dbal": "^2.5.0",
+    "limoncello-php/flute": "^0.10.0",
+    "limoncello-php/validation": "^0.10.0",
+    "ramsey/uuid": "4.x-dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0",
+    "mockery/mockery": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dreamsbond\\Flute\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Dreamsbond\\Tests\\Flute\\": "tests/"
+    }
+  }
+}
