@@ -9,7 +9,7 @@ use Limoncello\Validation\Rules\Generic\AndOperator;
 /**
  * @package Dreamsbond\Flute\Validation\Rules
  */
-trait UuidRuleTrait
+trait UuidRulesTrait
 {
     /**
      * @param RuleInterface|null $next
