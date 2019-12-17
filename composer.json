@@ -21,6 +21,7 @@
   "require": {
     "php": ">=7.1.0",
     "doctrine/dbal": "^2.5.0",
+    "limoncello-php/container": "^0.10.0",
     "limoncello-php/flute": "^0.10.0",
     "limoncello-php/validation": "^0.10.0",
     "ramsey/uuid": "4.x-dev"
@@ -31,12 +32,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Dreamsbond\\Flute\\": "src/"
+      "Orzford\\Flute\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Dreamsbond\\Tests\\Flute\\": "tests/"
+      "Orzford\\Tests\\Flute\\": "tests/"
     }
   }
 }

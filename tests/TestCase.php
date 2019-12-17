@@ -1,6 +1,6 @@
 <?php declare (strict_types=1);
 
-namespace Dreamsbond\Tests\Flute;
+namespace Orzford\Tests\Flute;
 
 use Doctrine\DBAL\DriverManager;
 use Mockery;

@@ -1,13 +1,13 @@
 <?php declare (strict_types=1);
 
-namespace Dreamsbond\Flute\Validation\Rules;
+namespace Orzford\Flute\Validation\Rules;
 
-use Dreamsbond\Flute\Validation\JsonApi\Rules\IsUuidRule;
+use Orzford\Flute\Validation\JsonApi\Rules\IsUuidRule;
 use Limoncello\Validation\Contracts\Rules\RuleInterface;
 use Limoncello\Validation\Rules\Generic\AndOperator;
 
 /**
- * @package Dreamsbond\Flute\Validation\Rules
+ * @package Orzford\Flute\Validation\Rules
  */
 trait UuidRulesTrait
 {

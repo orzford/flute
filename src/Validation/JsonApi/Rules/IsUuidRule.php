@@ -1,9 +1,9 @@
 <?php declare (strict_types=1);
 
-namespace Dreamsbond\Flute\Validation\JsonApi\Rules;
+namespace Orzford\Flute\Validation\JsonApi\Rules;
 
-use Dreamsbond\Flute\Contracts\Validation\ErrorCodes;
-use Dreamsbond\Flute\Validation\L10n\Messages;
+use Orzford\Flute\Contracts\Validation\ErrorCodes;
+use Orzford\Flute\Validation\L10n\Messages;
 use Limoncello\Validation\Contracts\Execution\ContextInterface;
 use Limoncello\Validation\Rules\ExecuteRule;
 use Ramsey\Uuid\Validator\ValidatorInterface as UuidValidatorInterface;

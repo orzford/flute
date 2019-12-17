@@ -1,13 +1,13 @@
 <?php declare (strict_types=1);
 
-namespace Dreamsbond\Flute\Types;
+namespace Orzford\Flute\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
-use Doctrine\DBAL\Types\GuidType as BaseGuidType;
+use Doctrine\DBAL\Types\GuidType;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidInterface;
 
-class UuidType extends BaseGuidType
+class UuidType extends GuidType
 {
     const NAME = 'limoncelloUuid';
 
@@ -16,11 +16,15 @@ class UuidType extends BaseGuidType
      */
     public function convertToDatabaseValue($value, AbstractPlatform $platform)
     {
-        if (empty($value))
-            return null;
+        $result = null;
 
-        if (assert($value instanceof UuidInterface) || ((is_string($value) || method_exists($value, '__toString')) && Uuid::isValid((string)$value)))
-            return (string)$value;
+        if (empty($value))
+            $result = null;
+
+        if (($value instanceof UuidInterface) || ((is_string($value) || method_exists($value, '__toString')) && Uuid::isValid((string)$value)))
+            $result = (string)$value;
+
+        return $result;
     }
 
     /**
@@ -28,16 +32,18 @@ class UuidType extends BaseGuidType
      */
     public function convertToPHPValue($value, AbstractPlatform $platform)
     {
+        $result = null;
+
         if (empty($value)) {
-            return null;
+            $result = null;
         }
 
         if ($value instanceof UuidInterface) {
-            return $value;
+            $result = $value;
         }
 
-        $uuid = Uuid::fromString($value);
+        $result = Uuid::fromString($value);
 
-        return $uuid;
+        return $result;
     }
 }

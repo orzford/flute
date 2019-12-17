@@ -1,13 +1,11 @@
 <?php declare (strict_types=1);
 
-namespace Dreamsbond\Flute\Validation\L10n;
-
-use Limoncello\Flute\L10n\Messages as BaseMessages;
+namespace Orzford\Flute\Validation\L10n;
 
 /**
- * @package Dreamsbond\Flute\Validation\L10n
+ * @package Orzford\Flute\Validation\L10n
  */
-interface Messages extends BaseMessages
+interface Messages extends \Limoncello\Flute\L10n\Messages
 {
     /**
      * @var string Validation Message Template

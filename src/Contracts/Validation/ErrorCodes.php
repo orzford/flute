@@ -1,13 +1,11 @@
 <?php
 
-namespace Dreamsbond\Flute\Contracts\Validation;
-
-use Limoncello\Flute\Contracts\Validation\ErrorCodes as BaseErrorCodes;
+namespace Orzford\Flute\Contracts\Validation;
 
 /**
- * @package Dreamsbond\Flute\Contracts\Validation
+ * @package Orzford\Flute\Contracts\Validation
  */
-interface ErrorCodes extends BaseErrorCodes
+interface ErrorCodes extends \Limoncello\Flute\Contracts\Validation\ErrorCodes
 {
     /**
      * Custom error code
