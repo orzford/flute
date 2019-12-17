@@ -54,9 +54,9 @@ final class UniqueConstraintWithDoctrineRule extends ExecuteRule
             $connection = $context->getContainer()->get(Connection::class);
             $builder = $connection->createQueryBuilder();
 
-            $tableName = $context->getProperties()(static::PROPERTY_TABLE_NAME);
-            $primaryName = $context->getProperties()(static::PROPERTY_PRIMARY_NAME);
-            $primaryKey = $context->getProperties()(static::PROPERTY_PRIMARY_KEY);
+            $tableName = $context->getProperties()->getProperty(static::PROPERTY_TABLE_NAME);
+            $primaryName = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_NAME);
+            $primaryKey = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_KEY);
 
             $columnNames = isset($primaryKey) ? "`{$primaryKey}`, `{$primaryName}" : "`{$primaryName}`";
 

@@ -3,6 +3,7 @@
 namespace Orzford\Tests\Flute;
 
 use Doctrine\DBAL\DriverManager;
+use Limoncello\Contracts\Data\ModelSchemaInfoInterface;
 use Mockery;
 use PHPUnit\Framework\TestCase as BaseTestCase;
 
@@ -39,4 +40,23 @@ class TestCase extends BaseTestCase
         $this->assertNotSame(false, $connection->exec('PRAGMA foreign_keys = ON;'));
         return $connection;
     }
+
+//    /**
+//     * @return ModelSchemaInfoInterface
+//     */
+//    protected function getModelSchemas()
+//    {
+//        $modelSchemas = static::createSchemas([
+//            Board::class,
+//            Comment::class,
+//            Emotion::class,
+//            Post::class,
+//            Role::class,
+//            User::class,
+//            Category::class,
+//            StringPKModel::class,
+//            PostExtended::class,
+//        ]);
+//        return $modelSchemas;
+//    }
 }
