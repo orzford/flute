@@ -58,7 +58,7 @@ final class UniqueConstraintWithDoctrineRule extends ExecuteRule
             $primaryName = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_NAME);
             $primaryKey = $context->getProperties()->getProperty(static::PROPERTY_PRIMARY_KEY);
 
-            $columnNames = isset($primaryKey) ? "`{$primaryKey}`, `{$primaryName}" : "`{$primaryName}`";
+            $columnNames = isset($primaryKey) ? "`{$primaryKey}`, `{$primaryName}`" : "`{$primaryName}`";
 
             $statement = $builder
                 ->select($columnNames)
