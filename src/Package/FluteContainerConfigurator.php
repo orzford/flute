@@ -4,7 +4,6 @@ namespace Orzford\Flute\Package;
 
 use Doctrine\DBAL\Types\Type;
 use Limoncello\Contracts\Container\ContainerInterface as LimoncelloContainerInterface;
-use Limoncello\Contracts\Routing\RouterInterface;
 use Orzford\Flute\Contracts\Http\Query\RouteIndexInterface;
 use Orzford\Flute\Http\Query\RouteIndex;
 use Orzford\Flute\Types\UuidType;
@@ -34,7 +33,7 @@ class FluteContainerConfigurator extends \Limoncello\Flute\Package\FluteContaine
             return new UuidValidator();
         };
 
-        $container[RouterInterface::class] = function (PsrContainerInterface $container): RouteIndexInterface {
+        $container[RouteIndexInterface::class] = function (PsrContainerInterface $container): RouteIndexInterface {
             return new RouteIndex($container);
         };
 
